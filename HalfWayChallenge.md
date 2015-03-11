@@ -2,21 +2,20 @@
 
 1. What is a class?
 
-A class would be the DNA or the blueprint of an object. An example would be that a bicycle would be an object of the class bicycles.
+A class would be the DNA or the blueprint of an object.
 
 
 
 2. What is an attribute?
 
-An attribute makes an object descriptive. If we had an object named bicycle I believe an attribute of that object could be wheels or color.
-
+Attribtutes are the characteristics of a class.
 
 
 
 
 3. What is an object?
 
-An instance of a class. If there a class of bicycles then a bicycle would be the object.
+An instance of a class.
 
 
 
@@ -40,8 +39,7 @@ Either Pad Thai or Lasagna.
 
 7. What is the difference between a locally scoped variable and an instance variable?
 
-A locally scoped variable can only be used with that specific block of code where as an instance variable can be used throughout the whole application
-
+A locally scoped variable can only be used with that specific block of code. An instance variable can only be used within the instance of a class (the object) that it's defined in.
 
 
 8. Why do we use version control like git?
@@ -52,7 +50,7 @@ To keep tabs on our latest versions of applications we create
 
 9. What is the difference between git and GitHub?
 
-Git deals with our code history. Github is somewhat of a hosting service for our Git folders
+Git deals with our code history. Github is somewhat of a hosting service for our Git repositories.
 
 
 
@@ -75,8 +73,7 @@ Model View and Controller.
 
 13. What is the difference between a Rails model and a database table? What is their relationship?
 
-A Rails model is similiar to a blueprint and database table is similiar to the actual product. You can't have a database table without the Rails model.
-
+A Rails model is similiar to a blueprint and database table is similiar to the actual product.
 
 
 14. How do we modify the database for our Rails app?
@@ -181,7 +178,7 @@ Perhaps a mechanical engineering school.
 
 
 31. What code would you use to find the a User record in the database with an id of 17?
-User.find17
+User.find(17)
 
 
 32. If you want to use an image inside your app, in what directory do you put it?
@@ -243,18 +240,20 @@ Rake db:seed will allow you to run your seed data. Rake db:migrate will allow yo
 
 41. If a User has many ParkingTickets, and the `user` variable points to a User object, what code would you use to get all the ParkingTickets?
 
-user.ParkingTickets.all
+user.parking_tickets
+
+
 
 
 42. If an Address model has a postal code attribute, what code would you use to get all Addresses from the database with a postal code of _33771_?
 
-address.where(postalcode: 33771)
+Address.where(postal_code: 33771)
 
 
 
 43. How do you create a new Book object in the database, if a Book class has the following required attributes: title, author, publish_year, pages?
 
-b = Book.new
+b = Book.create
 b.title.author.publish_year.pages
 
 
@@ -262,7 +261,7 @@ b.title.author.publish_year.pages
 
               Unpermitted parameters: first_name
 
- Never trust parameters from the scary internet, only allow the white list through. White list does not include first_name
+Never trust parameters from the scary internet, only allow the white list through. White list does not include first_name
 
 
 45. What one question do you wish I would have asked?
